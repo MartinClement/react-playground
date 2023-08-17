@@ -1,95 +1,38 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import MainWrapper from "@/app/components/wrappers/MainWrapper";
+import CodeWrapper from "@/app/components/wrappers/CodeWrapper";
 
-export default function Home() {
+import fs from "fs";
+
+const cssVariables = fs.readFileSync('app/globals.css').toString();
+export default function HomePage() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    <MainWrapper>
+      <h1>React Playground</h1>
+      <h2>Context</h2>
+      <p>
+        React playground is a personal project where I am exploring the React framework.<br />
+        It is based on NextJs to easy the routing and to fasten the setup.<br />
+        This project aims to develop a couple of functional components like.
+      </p>
+      <ul>
+        <li>Inputs</li>
+        <li>Buttons</li>
+        <li>Sliders</li>
+        <li>...</li>
+      </ul>
+      <p>or several UI components like</p>
+      <ul>
+        <li>Spinner</li>
+        <li>Card</li>
+        <li>Accordion</li>
+        <li>...</li>
+      </ul>
+      <h2>Styling</h2>
+      <p>
+        Each components will result in a dedicated page describing its api / use case.<br />
+        All the style is scoped by component and consume a bunch of css variables.
+      </p>
+      <CodeWrapper code={cssVariables} lang="css"></CodeWrapper>
+    </MainWrapper>
   )
 }

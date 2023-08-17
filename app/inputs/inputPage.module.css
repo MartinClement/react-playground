@@ -1,0 +1,12 @@
+.columns {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: var(--spacing-8)
+}
+
+.radio_wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: var(--spacing-4);
+}

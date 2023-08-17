@@ -1,0 +1,10 @@
+.radio {
+  border: 1px solid var(--foreground);
+  padding: 0;
+  margin: 0;
+  accent-color: var(--accent-3);
+
+  &:hover {
+    cursor: pointer;
+  }
+}

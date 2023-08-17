@@ -1,0 +1,9 @@
+.code_wrapper {
+  max-height: 200px;
+  overflow: auto;
+  padding: var(--spacing-4);
+  border: 1px solid var(--foreground);
+  border-radius: var(--radius-4) 0 0 var(--radius-4);
+  background: var(--foreground);
+  color: var(--background);
+}
