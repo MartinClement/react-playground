@@ -1,0 +1,13 @@
+.form_group {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-2);
+}
+
+.error_wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--spacing-1);
+  font-size: var(--fs-08);
+  color: var(--invalid);
+}

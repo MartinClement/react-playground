@@ -6,13 +6,22 @@ export type BaseInputType = "text" | "password";
 type BaseInputProps = {
   value: string,
   type: BaseInputType,
-  status?: string | undefined,
+  status?: "valid" | "invalid" | "unknown",
   BeforeSlot?: ReactElement,
   AfterSlot?: ReactElement,
+  name: string,
   onChange?: Function,
 };
 
-export default function BaseInput({ value, type, status = "unknown",BeforeSlot, AfterSlot, onChange } : BaseInputProps) {
+export default function BaseInput({
+  value,
+  type,
+  status = "unknown",
+  BeforeSlot,
+  AfterSlot,
+  name,
+  onChange
+} : BaseInputProps) {
 
   const inputRef = useRef<HTMLInputElement | null>(null);
   const focusInput = () => inputRef.current && inputRef.current.focus();
@@ -29,6 +38,8 @@ export default function BaseInput({ value, type, status = "unknown",BeforeSlot, 
       { BeforeSlot && BeforeSlot }
       <input
         ref={inputRef}
+        name={name}
+        id={name}
         type={type}
         className={style.input}
         value={value}

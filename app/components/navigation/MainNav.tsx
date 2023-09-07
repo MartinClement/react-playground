@@ -11,8 +11,8 @@ export interface Route {
 const ROUTES: Array<Route> = [
   { path: '/', name: 'Accueil' },
   { path: '/inputs', name: 'Inputs' },
-  { path: '/charts', name: 'Charts' },
-  { path: '/d3js', name: 'D3Js' },
+  // { path: '/charts', name: 'Charts' },
+  // { path: '/d3js', name: 'D3Js' },
   { path: '/form-validator', name: 'Form Validator' },
 ];
 

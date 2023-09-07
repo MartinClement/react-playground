@@ -1,0 +1,29 @@
+.range_wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, "autp");
+  gap: var(--spacing-2);
+}
+
+.range_slider {
+  accent-color: var(--accent-1);
+  width: 100%;
+
+  &.valid {
+    accent-color: var(--valid)
+  }
+
+  &.invalid {
+    accent-color: var(--invalid)
+  }
+}
+
+.range_list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.range_list_item {
+  transform: translate(50%, 0);
+}

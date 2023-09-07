@@ -28,6 +28,7 @@ export default function InputPage() {
           <BaseInput
             type={isPassword ? "password" : "text"}
             value={inputOne}
+            name="base_input"
             status={inputOneState}
             BeforeSlot={hasBeforeSlot ? <CrossIcon></CrossIcon> : undefined}
             AfterSlot={hasAfterSlot ? <CrossIcon></CrossIcon> : undefined}

@@ -13,6 +13,7 @@
   --radius-8: calc(8 * var(--radius-base));
 
   --fs-base: 1.6rem;
+  --fs-08:calc(0.8 * var(--fs-base));
   --fs-1: calc(1 * var(--fs-base));
   --fs-2: calc(1.5 * var(--fs-base));
   --fs-4: calc(2 * var(--fs-base));
